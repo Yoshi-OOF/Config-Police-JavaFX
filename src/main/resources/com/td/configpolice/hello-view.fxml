@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="462.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.td.configpolice.HelloController">
+   <top>
+      <AnchorPane prefHeight="181.0" prefWidth="462.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="35.0" />
+         </BorderPane.margin>
+         <children>
+            <Label layoutX="14.0" layoutY="16.0" text="Police :" />
+            <Label layoutX="189.0" layoutY="16.0" text="Style de police :" />
+            <Label layoutX="349.0" layoutY="16.0" text="Taille :" />
+            <TextField fx:id="FontTextField" layoutX="14.0" layoutY="34.0" prefHeight="25.0" prefWidth="169.0" text="Times New Roman" />
+            <TextField fx:id="FontStyleTextField" layoutX="189.0" layoutY="34.0" text="Normal" />
+            <TextField fx:id="FontHeightTextField" layoutX="349.0" layoutY="34.0" prefHeight="25.0" prefWidth="103.0" text="11" />
+            <ListView fx:id="FontListView" layoutX="14.0" layoutY="59.0" prefHeight="77.0" prefWidth="169.0" />
+            <ListView fx:id="FontStyleListView" layoutX="189.0" layoutY="59.0" prefHeight="77.0" prefWidth="150.0" />
+            <ListView fx:id="FontHeightListView" layoutX="349.0" layoutY="59.0" prefHeight="77.0" prefWidth="104.0" />
+            <Label layoutX="14.0" layoutY="141.0" text="Couleur de police :" />
+            <ColorPicker fx:id="FontColorPicker" layoutX="14.0" layoutY="158.0" promptText="Automatique" />
+            <ComboBox layoutX="189.0" layoutY="158.0" prefHeight="25.0" prefWidth="103.0" promptText="(aucun)" />
+            <Label layoutX="189.0" layoutY="141.0" text="Soulignement :" />
+            <Label layoutX="308.0" layoutY="141.0" text="Couleur de soulignement :" />
+            <ComboBox layoutX="308.0" layoutY="158.0" prefHeight="25.0" prefWidth="142.0" promptText="Automatique" />
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <HBox prefHeight="28.0" prefWidth="462.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Button" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Button" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Button" />
+            <Button mnemonicParsing="false" onAction="#onCancelButtonClicked" prefHeight="21.0" prefWidth="97.0" text="Annuler" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <center>
+      <VBox prefHeight="313.0" prefWidth="431.0" BorderPane.alignment="CENTER">
+         <children>
+            <FlowPane prefHeight="20.0" prefWidth="462.0">
+               <children>
+                  <Label text="Effets">
+                     <FlowPane.margin>
+                        <Insets left="10.0" />
+                     </FlowPane.margin>
+                  </Label>
+                  <Separator prefHeight="7.0" prefWidth="412.0" />
+               </children>
+            </FlowPane>
+            <AnchorPane prefHeight="103.0" prefWidth="462.0">
+               <children>
+                  <CheckBox layoutX="14.0" layoutY="5.0" mnemonicParsing="false" text="Barré" />
+                  <CheckBox layoutX="14.0" layoutY="29.0" mnemonicParsing="false" text="Barré double" />
+                  <CheckBox layoutX="14.0" layoutY="53.0" mnemonicParsing="false" text="Exposant" />
+                  <CheckBox layoutX="14.0" layoutY="77.0" mnemonicParsing="false" text="Indice" />
+                  <CheckBox layoutX="321.0" layoutY="5.0" mnemonicParsing="false" text="Petites majuscules" />
+                  <CheckBox layoutX="321.0" layoutY="29.0" mnemonicParsing="false" text="Majuscules" />
+                  <CheckBox layoutX="321.0" layoutY="53.0" mnemonicParsing="false" text="Masqué" />
+               </children>
+            </AnchorPane>
+            <FlowPane prefHeight="20.0" prefWidth="462.0">
+               <children>
+                  <Label text="Aperçu">
+                     <FlowPane.margin>
+                        <Insets left="10.0" />
+                     </FlowPane.margin>
+                  </Label>
+                  <Separator prefHeight="7.0" prefWidth="412.0" />
+               </children>
+            </FlowPane>
+            <AnchorPane prefHeight="103.0" prefWidth="462.0">
+               <children>
+                  <GridPane layoutX="10.0" layoutY="7.0" prefHeight="65.0" prefWidth="442.0" style="-fx-border-color: Black;">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="437.33333333333337" minWidth="10.0" prefWidth="325.3333333333333" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="ResultatLabel" text="IUT de Laval" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <Label layoutX="10.0" layoutY="72.0" prefHeight="20.0" prefWidth="429.0" text="Police TrueType, identique à l’écran et à l’impression" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
